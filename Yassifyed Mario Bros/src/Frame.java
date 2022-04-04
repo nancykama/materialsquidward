@@ -33,17 +33,18 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	public void paint(Graphics g) {
 		super.paintComponent(g);
 		//bg before game begins
+		
 		bg.paint(g);
 		squiddy.paint(g);
 		
+		/*
 		if(!gameStart) {
 			g.setColor(Color.blue);
 			g.setFont(f2);
 			g.drawString("welcome. help material squiddy win his chanel nine boots", 70, 100);
 		return;
 		} 
-		
-		bg.paint(g);
+		*/
 		
 		//add rectangles
 
