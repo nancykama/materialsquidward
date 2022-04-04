@@ -18,7 +18,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//CREATE THE OBJECTS (STEP 1)
 	Background 	bg 	= new Background(0, 0);
-	Squiddy squiddy = new Squiddy (50, 400);
+	//Squiddy squiddy = new Squiddy (50, 400);
 	
 	//intro screen 
 	boolean gameStart = false;
@@ -35,7 +35,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//bg before game begins
 		
 		bg.paint(g);
-		squiddy.paint(g);
+	//	squiddy.paint(g);
 		
 		/*
 		if(!gameStart) {
