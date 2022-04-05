@@ -16,7 +16,7 @@ public class Jellyfish {
 		public Jellyfish (int x, int y) {
 			this.x1 = x;
 			this.y1 = y;
-			img = getImage("/imgs/octopus obstacle.png"); //load the image for Tree
+			img = getImage("/imgs/jellyfish (2).gif"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
 			init(x, y); 				//initialize the location of the image
@@ -48,12 +48,12 @@ public class Jellyfish {
 			 }
 			
 			 tx.setToTranslation(x1, y1);
-			tx.scale(.9, .9);
+			tx.scale(.2, .2);
 		}
 		
 		private void init(double a, double b) {
 			tx.setToTranslation(a, b);
-			tx.scale(1.0, 1.0);
+			tx.scale(0.4, 0.4);
 		}
 		
 		

@@ -18,7 +18,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//CREATE THE OBJECTS (STEP 1)
 	Background 	bg 	= new Background(0, 0);
-	//Squiddy squiddy = new Squiddy (50, 400);
+	Squiddy squiddy = new Squiddy (50, 380);
+	Jellyfish jelly1 = new Jellyfish (10, 10);
 	
 	//intro screen 
 	boolean gameStart = false;
@@ -35,8 +36,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//bg before game begins
 		
 		bg.paint(g);
-	//	squiddy.paint(g);
-		
+		squiddy.paint(g);
+		jelly1.paint(g);
 		/*
 		if(!gameStart) {
 			g.setColor(Color.blue);
@@ -145,15 +146,18 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		// TODO Auto-generated method stub
 			System.out.println(arg0.getKeyCode());
 			
+			squiddy.fall();
 			//intro screen diss. when enter is pressed
-			if (arg0.getKeyCode() == 10) {
-				gameStart = true;
+			/*if (arg0.getKeyCode() == 10) {
+				 gameStart = true;
 			}
+			*/
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
+			squiddy.jump();
 	}
 
 	@Override

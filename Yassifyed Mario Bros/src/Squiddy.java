@@ -22,7 +22,7 @@ public class Squiddy {
 	public Squiddy(int x, int y) {
 		this.x = x;
 		this.y = y;
-		img = getImage("/imgs/flipperpepapa.png"); //load the image for Tree
+		img = getImage("/imgs/squiddy.png"); //load the image for Tree
 
 		tx = AffineTransform.getTranslateInstance(x, y );
 		init(x, y); 				//initialize the location of the image
@@ -45,10 +45,10 @@ public class Squiddy {
 	}
 	/* update the picture variable location */
 	private void update() {
-		y += vy;
-		vy = ay;
 		x += vx;
 		vx = ax;
+		y += vy;
+		vy = ay;
 		
 		if (x > 790) {
 			x = 10;
@@ -71,21 +71,21 @@ public class Squiddy {
 		}
 		
 		tx.setToTranslation(x, y);
-		tx.scale(0.2, 0.2);
+		tx.scale(0.8, 0.8);
 	}
 	
-	public void fly () {
-		 vy -= 15;
-		 vx += 10;
+	public void jump () {
+		 vy -= 50;
+		 vx += 30;
 	 }
 	
 	private void init(double a, double b) {
 		tx.setToTranslation(a, b);
-		tx.scale(.5, .5);
+		tx.scale(.8, .8);
 	}
 	
-	public void flap () {
-		vy -= 75;
+	public void fall () {
+		vy -= 100;
 	}
 	
 
