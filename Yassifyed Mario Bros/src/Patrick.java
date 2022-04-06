@@ -10,13 +10,12 @@ public class Patrick {
 		public int x1 , y1;
 		//position 
 		private Image img;
-		public int bvy1 = 4;
 		private AffineTransform tx;
 
 		public Patrick(int x, int y) {
 			this.x1 = x;
 			this.y1 = y;
-			img = getImage("/imgs/octopus obstacle.png"); //load the image for Tree
+			img = getImage("/imgs/emogworlpatty.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
 			init(x, y); 				//initialize the location of the image
@@ -41,19 +40,13 @@ public class Patrick {
 		}
 		/* update the picture variable location */
 		private void update() {
-			 y1+= bvy1;
-			 
-			 if (y1 > 600) {
-				 y1 = 0;
-			 }
-			
-			 tx.setToTranslation(x1, y1);
-			tx.scale(.9, .9);
+			tx.setToTranslation(x1, y1);
+			tx.scale(1.2, 1.2);
 		}
 		
 		private void init(double a, double b) {
 			tx.setToTranslation(a, b);
-			tx.scale(1.0, 1.0);
+			tx.scale(1.2, 1.2);
 		}
 		
 		

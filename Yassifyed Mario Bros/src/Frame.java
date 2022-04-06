@@ -20,6 +20,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
 	Jellyfish jelly1 = new Jellyfish (10, 10);
+	Patrick patty1 = new Patrick (150, 450);
+	Patrick patty2 = new Patrick (500, 450);
 	
 	//intro screen 
 	boolean gameStart = false;
@@ -38,6 +40,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		bg.paint(g);
 		squiddy.paint(g);
 		jelly1.paint(g);
+		patty1.paint(g);
+		patty2.paint(g);
 		/*
 		if(!gameStart) {
 			g.setColor(Color.blue);

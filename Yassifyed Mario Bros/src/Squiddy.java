@@ -75,8 +75,8 @@ public class Squiddy {
 	}
 	
 	public void jump () {
-		 vy -= 50;
-		 vx += 30;
+		vy -= 50;
+		vx += 30;
 	 }
 	
 	private void init(double a, double b) {
