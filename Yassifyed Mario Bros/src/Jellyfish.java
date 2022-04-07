@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class Jellyfish {
+public class Jellyfish extends Patrick{
 	//add location attributes
 		public int x1 , y1;
 		//position 
@@ -13,13 +13,12 @@ public class Jellyfish {
 		public int bvy1 = 4;
 		private AffineTransform tx;
 
-		public Jellyfish (int x, int y) {
-			this.x1 = x;
-			this.y1 = y;
+		public Jellyfish (int x1, int y1) {
+			
+			super(x1, y1);
 			img = getImage("/imgs/jellyfish (2).gif"); //load the image for Tree
-
-			tx = AffineTransform.getTranslateInstance(x, y );
-			init(x, y); 				//initialize the location of the image
+			tx = AffineTransform.getTranslateInstance(x1, y1);
+			init(x1, y1); 				//initialize the location of the image
 										//use your variables
 		}
 		
@@ -41,7 +40,7 @@ public class Jellyfish {
 		}
 		/* update the picture variable location */
 		private void update() {
-			 y1+= bvy1;
+			 y1 += bvy1;
 			 
 			 if (y1 > 600) {
 				 y1 = 0;
