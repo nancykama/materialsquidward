@@ -39,14 +39,9 @@ public class Jellyfish extends Patrick{
 
 		}
 		/* update the picture variable location */
+		
 		private void update() {
-			 y1 += bvy1;
-			 
-			 if (y1 > 600) {
-				 y1 = 0;
-			 }
-			
-			 tx.setToTranslation(x1, y1);
+			tx.setToTranslation(x1, y1);
 			tx.scale(.2, .2);
 		}
 		
