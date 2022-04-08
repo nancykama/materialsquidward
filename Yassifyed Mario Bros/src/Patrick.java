@@ -41,7 +41,7 @@ public class Patrick {
 		/* update the picture variable location */
 		private void update() {
 			tx.setToTranslation(x1, y1);
-			tx.scale(1.2, 1.2);
+			tx.scale(1.4, 1.4);
 		}
 		
 		private void init(double a, double b) {

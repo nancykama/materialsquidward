@@ -5,29 +5,28 @@ import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class Spongebob {
+public class Spongebob extends Patrick {
 	//add location attributes
-		public int x1 , y1;
+		public int x2 , y2;
 		//position 
 		private Image img;
-		public int bvy1 = 4;
 		private AffineTransform tx;
 
-		public Spongebob(int x, int y) {
-			this.x1 = x;
-			this.y1 = y;
-			img = getImage("/imgs/octopus obstacle.png"); //load the image for Tree
+		public Spongebob (int x2, int y2) {
+			super(x2, y2);
+			img = getImage("/imgs/fully yassified spongy.png"); //load the image for Tree
 
-			tx = AffineTransform.getTranslateInstance(x, y );
-			init(x, y); 				//initialize the location of the image
+			tx = AffineTransform.getTranslateInstance(x2, y2 );
+			init(x2, y2); 				//initialize the location of the image
 										//use your variables
 		}
 		
 		
 		
+		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x1, y1);       
+			init(x2, y2);       
 		}
 		
 		public void paint(Graphics g) {
@@ -40,20 +39,17 @@ public class Spongebob {
 
 		}
 		/* update the picture variable location */
+		
+		
+		
 		private void update() {
-			 y1+= bvy1;
-			 
-			 if (y1 > 600) {
-				 y1 = 0;
-			 }
-			
-			 tx.setToTranslation(x1, y1);
-			tx.scale(.9, .9);
+			tx.setToTranslation(x2, y2);
+			tx.scale(0.2, 0.2);
 		}
 		
 		private void init(double a, double b) {
 			tx.setToTranslation(a, b);
-			tx.scale(1.0, 1.0);
+			tx.scale(1.6, 1.6);
 		}
 		
 		

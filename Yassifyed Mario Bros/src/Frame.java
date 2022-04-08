@@ -22,6 +22,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Jellyfish jelly1 = new Jellyfish (10, 10);
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
+	Spongebob spongy = new Spongebob (300, 450);
+	Spongebob introspongy = new Spongebob (300, 450);
 	
 	//intro screen 
 	boolean gameStart = false;
@@ -31,25 +33,29 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//font
 	Font f1 = new Font (Font.MONOSPACED, Font.PLAIN, 26);
-	Font f2 = new Font (Font.DIALOG, Font.PLAIN, 28);
+	Font f2 = new Font (Font.DIALOG, Font.PLAIN, 26);
 	
 	public void paint(Graphics g) {
 		super.paintComponent(g);
 		//bg before game begins
 		
 		bg.paint(g);
+		introspongy.paint(g);
+		
+		if(!gameStart) {
+			g.setColor(Color.WHITE);
+			g.setFont(f2);
+			g.drawString("welcome. help material squiddy win his chanel nine boots", 60, 250);
+			g.drawString("press enter to commence your pineapple under-the-sea adventure", 20, 300);
+		return;
+		} 
+		
+		bg.paint(g);
 		squiddy.paint(g);
 		jelly1.paint(g);
 		patty1.paint(g);
 		patty2.paint(g);
-		/*
-		if(!gameStart) {
-			g.setColor(Color.blue);
-			g.setFont(f2);
-			g.drawString("welcome. help material squiddy win his chanel nine boots", 70, 100);
-		return;
-		} 
-		*/
+		spongy.paint(g);
 		
 		//add rectangles
 
@@ -88,6 +94,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				
 
 		// game instructions
+				g.setColor(Color.WHITE);
+				g.setFont(f2);
+				g.drawString("press enter to jump and proceed forward", 100, 30);
 
 		//set collision
 		
@@ -152,10 +161,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			
 			squiddy.fall();
 			//intro screen diss. when enter is pressed
-			/*if (arg0.getKeyCode() == 10) {
+			if (arg0.getKeyCode() == 10) {
 				 gameStart = true;
 			}
-			*/
 	}
 
 	@Override
