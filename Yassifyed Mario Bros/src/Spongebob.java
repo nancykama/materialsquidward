@@ -26,7 +26,7 @@ public class Spongebob extends Patrick {
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x2, y2);       
+			init(x2, y2);        
 		}
 		
 		public void paint(Graphics g) {

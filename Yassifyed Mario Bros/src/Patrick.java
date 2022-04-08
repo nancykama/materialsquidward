@@ -18,7 +18,7 @@ public class Patrick {
 			img = getImage("/imgs/emogworlpatty.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
-			init(x, y); 				//initialize the location of the image
+			init(x, y);  			//initialize the location of the image
 										//use your variables
 		}
 		

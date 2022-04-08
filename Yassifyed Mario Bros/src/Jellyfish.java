@@ -41,7 +41,7 @@ public class Jellyfish {
 		}
 		/* update the picture variable location */
 		private void update() {
-			 y1+= bvy1;
+			 y1+= bvy1; 
 			 
 			 if (y1 > 600) {
 				 y1 = 0;

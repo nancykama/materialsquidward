@@ -49,7 +49,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			g.drawString("press enter to commence your pineapple under-the-sea adventure", 20, 300);
 		return;
 		} 
-		
+		 
 		bg.paint(g);
 		squiddy.paint(g);
 		jelly1.paint(g);

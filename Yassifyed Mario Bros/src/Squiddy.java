@@ -68,7 +68,7 @@ public class Squiddy {
 		if (y < 10) {
 			y = 10;
 			vy = 10;
-		}
+		} 
 		
 		tx.setToTranslation(x, y);
 		tx.scale(0.8, 0.8);
