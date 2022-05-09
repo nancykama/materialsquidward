@@ -5,20 +5,21 @@ import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class Patrick {
+public class Coin {
 	//add location attributes
-		private int x1 , y1;
-		//position 
+		public int x2 , y2;
+		//position of the coins
 		private Image img;
+		public int bvx1 = 4;
 		private AffineTransform tx;
 
-		public Patrick(int x, int y) {
-			this.x1 = x;
-			this.y1 = y;
-			img = getImage("/imgs/emogworlpatty.png"); //load the image for Tree
+		public Coin(int x, int y) {
+			this.x2 = x;
+			this.y2 = y;
+			img = getImage("/imgs/coinshell.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
-			init(x, y);  			//initialize the location of the image
+			init(x, y); 				//initialize the location of the image
 										//use your variables
 		}
 		
@@ -26,7 +27,7 @@ public class Patrick {
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x1, y1);       
+			init(x2, y2);       
 		}
 		
 		public void paint(Graphics g) {
@@ -40,13 +41,19 @@ public class Patrick {
 		}
 		/* update the picture variable location */
 		private void update() {
-			tx.setToTranslation(x1, y1);
-			tx.scale(1.4, 1.4);
+			 x2+= bvx1;
+			 
+			 if (x2 > 800) {
+				 x2 = 0;
+			 }
+			
+			 tx.setToTranslation(x2, y2);
+			tx.scale(.9, .9);
 		}
 		
 		private void init(double a, double b) {
 			tx.setToTranslation(a, b);
-			tx.scale(1.2, 1.2);
+			tx.scale(1.0, 1.0);
 		}
 		
 		
@@ -54,7 +61,7 @@ public class Patrick {
 		private Image getImage(String path) {
 			Image tempImage = null;
 			try {
-				URL imageURL = Patrick.class.getResource(path);
+				URL imageURL = Coin.class.getResource(path);
 				tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
 			} catch (Exception e) {
 				e.printStackTrace();

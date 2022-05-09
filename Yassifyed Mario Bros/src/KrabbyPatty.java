@@ -16,7 +16,7 @@ public class KrabbyPatty {
 		public KrabbyPatty (int x, int y) {
 			this.x2 = x;
 			this.y2 = y;
-			img = getImage("/imgs/coinshell.png"); //load the image for Tree
+			img = getImage("/imgs/material_patty-removebg-preview.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
 			init(x, y); 				//initialize the location of the image
@@ -48,7 +48,7 @@ public class KrabbyPatty {
 			 }
 			
 			 tx.setToTranslation(x2, y2);
-			tx.scale(.9, .9);
+			tx.scale(.2, .2);
 		}
 		
 		private void init(double a, double b) {

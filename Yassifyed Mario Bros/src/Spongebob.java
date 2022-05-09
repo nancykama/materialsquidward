@@ -7,18 +7,15 @@ import java.net.URL;
 
 public class Spongebob extends Patrick {
 	//add location attributes
-		public int x2 , y2;
+		private int x2 , y2;
 		//position 
 		private Image img;
 		private AffineTransform tx;
 
-		public Spongebob (int x2, int y2) {
-			super(x2, y2);
+		public Spongebob (int x, int y) {
+			super(x, y);
 			img = getImage("/imgs/fully yassified spongy.png"); //load the image for Tree
-
-			tx = AffineTransform.getTranslateInstance(x2, y2 );
-			init(x2, y2); 				//initialize the location of the image
-										//use your variables
+			//use your variables
 		}
 		
 		

@@ -23,10 +23,14 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
 	Spongebob spongy = new Spongebob (300, 450);
-	Spongebob introspongy = new Spongebob (300, 450);
+	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
+	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
 	
 	//intro screen 
 	boolean gameStart = false;
+	
+	//coin disappearance
+	boolean coinCollect = false;
 	
 	//score 
 	int score = 100;  
@@ -40,7 +44,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//bg before game begins
 		
 		bg.paint(g);
-		introspongy.paint(g);
+		coin1.paint(g);
+		coin2.paint(g);
 		
 		if(!gameStart) {
 			g.setColor(Color.WHITE);
@@ -49,43 +54,53 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			g.drawString("press enter to commence your pineapple under-the-sea adventure", 20, 300);
 		return;
 		} 
+		
 		 
 		bg.paint(g);
 		squiddy.paint(g);
 		jelly1.paint(g);
 		patty1.paint(g);
 		patty2.paint(g);
-		spongy.paint(g);
 		
 		//add rectangles
+			Rectangle rsquiddy = new Rectangle (squiddy.x, squiddy.y, 50, 50);
 
-		/*create array with coin objects
-		Coin myShells [] = new Coin[18];
+		KrabbyPatty[][] myCoins = new KrabbyPatty[4][6];
 		int x2 = 200;
 		int y2 = 200;
 		int bvx = 50;
-		for (int i = 0; i < myShells.length; i ++) {
-		    Coin temp = new Coin(x2, y2);
-		    myShells[i] = temp;
-		    myShells[i].paint(g);
-		    
-		    //collision between peppa and coins
-		    Rectangle rcoin = new Rectangle (myShells[i].x2, myShells[i].y2, 50, 50);
-		    if (rpeppa.intersects(rcoin)) {
-				score += 1;
+		
+		for (int r = 0; r < myCoins.length; r ++) {
+			for (int c = 0; c < myCoins[0].length; c++) {
+				KrabbyPatty temp = new KrabbyPatty(x2, y2);
+				myCoins[r][c] = temp;
+				
+				//collision between peppa and coins
+			    Rectangle rcoin = new Rectangle (myCoins[r][c].x2, myCoins[r][c].y2, 50, 50);
+			    if (rsquiddy.intersects(rcoin)) {
+					score += 1;
+					coinCollect = true;
+				}
+			    
 			}
+		}
+		
+		for (int r = 0; r < myCoins.length; r++) {
+			for (int c = 0; c < myCoins[0].length; c++) {
+				if (!coinCollect) {
+					myCoins[r][c].paint(g);
+				}
+			}
+		}
 		    
-		    //boundaries 
+		    
+			//boundaries 
 		    x2+= bvx;
 		    if (x2 > 450) {
 				 x2 = 200;
 				 y2 += 50;
-			 }
+			}
 		    
-		}
-		*/
-		
-		
 				
 		//score
 				g.setColor(Color.BLACK);
@@ -96,7 +111,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		// game instructions
 				g.setColor(Color.WHITE);
 				g.setFont(f2);
-				g.drawString("press enter to jump and proceed forward", 100, 30);
+				g.drawString("press enter to jump and proceed forward", 150, 30);
 
 		//set collision
 		
