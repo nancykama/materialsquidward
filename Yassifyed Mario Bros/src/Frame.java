@@ -37,6 +37,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	//coin disappearance
 	boolean coinCollect = false; 
 	
+	//exit screen
+	boolean gameEnd = false;
+	
 	//score 
 	int score = 100;  
 	
@@ -46,6 +49,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	public void paint(Graphics g) {
 		super.paintComponent(g);
+		
+		
 		//bg before game begins
 		
 		bg.paint(g);
@@ -89,6 +94,10 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
 					score -= 3;
 				}
+		
+		//end game
+				
+				
 	}
 	
 	public static void main(String[] arg) {
@@ -153,6 +162,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			if (arg0.getKeyCode() == 10) {
 				 gameStart = true;
 			}
+			
 	}
 
 	@Override

@@ -40,7 +40,7 @@ public class Patrick {
 		}
 		/* update the picture variable location */
 		private void update() {
-			tx.setToTranslation(x2, y2); 
+			tx.setToTranslation(x2, y2);  
 			tx.scale(1.4, 1.4);
 		}
 		
