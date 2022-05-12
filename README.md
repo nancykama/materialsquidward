@@ -11,11 +11,11 @@ For this game, we wanted to do a fun spinoff on Mario Bros, collabing with Spong
 ![Game GIF recording](https://user-images.githubusercontent.com/70664950/148616276-9d9905af-cb97-4c10-8976-aa47a80b6436.gif)
 
 ## **Meet the Characters:**
-![squiddy](https://www.simpleimageresizer.com/_uploads/photos/de9d2428/readme_squid_3_150x225-removebg-preview_1_150x225.png)
-![jellyfish](https://www.simpleimageresizer.com/_uploads/photos/de9d2428/jelly-removebg-preview_125x125.png)
-![patrick](https://www.simpleimageresizer.com/_uploads/photos/de9d2428/emogworlpatty_1_125x125.png)
-![spongy](https://www.simpleimageresizer.com/_uploads/photos/de9d2428/fully_yassified_spongy_5_180x125.png)
-![krabbypatty](https://www.simpleimageresizer.com/_uploads/photos/de9d2428/material_patty-removebg-preview_4_80x80.png)
+![squiddy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/squiddy_225x225.png)
+![jellyfish](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/jelly-removebg-preview_1_125x120.png)
+![patrick](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/emogworlpatty_150x150.png)
+![spongy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/fully_yassified_spongy_4_225x150.png)
+![krabbypatty](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/material_patty-removebg-preview_2_90x90.png)
  
 ## **What We Learned:**
 As we have been working on this project for the whole quarter, we learned a lot. We learned how to apply the skills we were taught (shoutout Mr.David) throughout CSA towards projects we see in real life rather than ***AP FRQs and MCQs***. The biggest concepts we got to put to motion were `Inheritance` and `2D arrays` with nested loops. With the AP exam rapidly approaching, we only got to use these functions in accordance with exam practice, so applying them in the game was our first time learning how we can recognize these concepts at work in other well known projects and games. 
