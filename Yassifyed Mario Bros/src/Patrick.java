@@ -7,14 +7,14 @@ import java.net.URL;
 
 public class Patrick {
 	//add location attributes
-		private int x1 , y1;
+		public int x2 , y2;
 		//position 
 		private Image img;
 		private AffineTransform tx;
 
 		public Patrick(int x, int y) {
-			this.x1 = x;
-			this.y1 = y;
+			this.x2 = x;
+			this.y2 = y;
 			img = getImage("/imgs/emogworlpatty.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
@@ -26,7 +26,7 @@ public class Patrick {
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x1, y1);       
+			init(x2, y2);       
 		}
 		
 		public void paint(Graphics g) {
@@ -40,7 +40,7 @@ public class Patrick {
 		}
 		/* update the picture variable location */
 		private void update() {
-			tx.setToTranslation(x1, y1);
+			tx.setToTranslation(x2, y2);
 			tx.scale(1.4, 1.4);
 		}
 		

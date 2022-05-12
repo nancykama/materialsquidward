@@ -7,15 +7,15 @@ import java.net.URL;
 
 public class KrabbyPatty {
 	//add location attributes
-		public int x2 , y2;
+		public int x3 , y3;
 		//position of the coins
 		private Image img;
 		public int bvx1 = 4;
 		private AffineTransform tx;
 
 		public KrabbyPatty (int x, int y) {
-			this.x2 = x;
-			this.y2 = y;
+			this.x3 = x;
+			this.y3 = y;
 			img = getImage("/imgs/material_patty-removebg-preview.png"); //load the image for Tree
 
 			tx = AffineTransform.getTranslateInstance(x, y );
@@ -27,7 +27,7 @@ public class KrabbyPatty {
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x2, y2);       
+			init(x3, y3);       
 		}
 		
 		public void paint(Graphics g) {
@@ -41,13 +41,13 @@ public class KrabbyPatty {
 		}
 		/* update the picture variable location */
 		private void update() {
-			 x2+= bvx1;
+			 x3 += bvx1;
 			 
-			 if (x2 > 800) {
-				 x2 = 0;
+			 if (x3 > 800) {
+				 x3 = 0;
 			 }
 			
-			 tx.setToTranslation(x2, y2);
+			 tx.setToTranslation(x3, y3);
 			tx.scale(.2, .2);
 		}
 		
