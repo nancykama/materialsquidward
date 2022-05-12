@@ -18,12 +18,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//jelly rand vars
 	int x1 = (int)(Math.random() * 601) + 100;
-	int y1 = (int)(Math.random() * 401) + 100;
 	
 	//CREATE THE OBJECTS (STEP 1)
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
-	Jellyfish jelly1 = new Jellyfish (x1, y1);
+	Jellyfish jelly1 = new Jellyfish (x1, 50);
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
 	Spongebob spongy = new Spongebob (300, 450);
@@ -60,7 +59,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		if(!gameStart) {
 			g.setColor(Color.WHITE);
 			g.setFont(f2);
-			g.drawString("welcome. help material squiddy win his chanel nine boots", 60, 250);
+			g.drawString("welcome. help material squiddy win", 187, 250);
 			g.drawString("press enter to commence your pineapple under-the-sea adventure", 20, 300);
 		return;
 		} 

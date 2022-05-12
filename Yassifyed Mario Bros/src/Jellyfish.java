@@ -44,7 +44,7 @@ public class Jellyfish {
 			 y1+= bvy1; 
 			 
 			 if (y1 > 600) {
-				 y1 = 0;
+				 y1 = 0; 
 			 }
 			
 			 tx.setToTranslation(x1, y1);

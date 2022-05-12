@@ -8,7 +8,7 @@ import java.net.URL;
 public class KrabbyPatty {
 	//add location attributes
 		public int x3 , y3;
-		//position of the coins
+		//position of the coins 
 		private Image img;
 		public int bvx1 = 4;
 		private AffineTransform tx;

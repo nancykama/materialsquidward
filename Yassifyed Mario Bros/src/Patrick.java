@@ -12,7 +12,7 @@ public class Patrick {
 		private Image img;
 		private AffineTransform tx;
 
-		public Patrick(int x, int y) {
+		public Patrick(int x, int y) { 
 			this.x2 = x;
 			this.y2 = y;
 			img = getImage("/imgs/emogworlpatty.png"); //load the image for Tree
