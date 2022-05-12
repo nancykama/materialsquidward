@@ -25,7 +25,7 @@ public class KrabbyPatty {
 		
 		
 		
-		public void changePicture(String newFileName) {
+		public void changePicture(String newFileName) { 
 			img = getImage(newFileName);
 			init(x3, y3);       
 		}

@@ -35,7 +35,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	boolean gameStart = false;
 	
 	//coin disappearance
-	boolean coinCollect = false;
+	boolean coinCollect = false; 
 	
 	//score 
 	int score = 100;  
