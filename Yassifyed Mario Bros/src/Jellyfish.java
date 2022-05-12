@@ -37,7 +37,7 @@ public class Jellyfish {
 			//call update to update the actual picture location
 			update();
 			g2.drawImage(img, tx, null);
-
+ 
 		}
 		/* update the picture variable location */
 		private void update() {

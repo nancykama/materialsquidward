@@ -14,7 +14,7 @@ public class KrabbyPatty {
 		private AffineTransform tx;
 
 		public KrabbyPatty (int x, int y) {
-			this.x3 = x;
+			this.x3 = x; 
 			this.y3 = y;
 			img = getImage("/imgs/material_patty-removebg-preview.png"); //load the image for Tree
 

@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class Patrick {
+public class Patrick { 
 	//add location attributes
 		public int x2 , y2;
 		//position 

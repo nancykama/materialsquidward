@@ -19,7 +19,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	//jelly rand vars
 	int x1 = (int)(Math.random() * 601) + 100;
 	
-	//CREATE THE OBJECTS (STEP 1)
+	//CREATE THE OBJECTS (STEP 1) 
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
 	Jellyfish jelly1 = new Jellyfish (x1, 50);
