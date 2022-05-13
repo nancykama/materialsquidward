@@ -14,7 +14,7 @@ For this game, we wanted to do a fun spinoff on Mario Bros, collabing with Spong
 ![squiddy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/squiddy_225x225.png)
 ![jellyfish](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/jelly-removebg-preview_1_125x120.png)
 ![patrick](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/emogworlpatty_150x150.png)
-![spongy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/fully_yassified_spongy_4_225x150.png)
+![spongy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/fully_yassified_spongy_2_200x140.png)
 ![krabbypatty](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/material_patty-removebg-preview_2_90x90.png)
  
 ## **What We Learned:**
