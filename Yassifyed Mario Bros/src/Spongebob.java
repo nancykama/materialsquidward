@@ -7,13 +7,15 @@ import java.net.URL;
 
 public class Spongebob extends Patrick {
 	//add location attributes
-		private int x2 , y2;
+		public int x4 , y4;
 		//position 
 		private Image img;
 		private AffineTransform tx;
 
 		public Spongebob (int x, int y) {
-			super(x, y);
+			super(x , y);
+			this.x4 = x;
+			this.y4 = y;
 			img = getImage("/imgs/fully yassified spongy.png"); //load the image for Tree
 			//use your variables
 		}
@@ -23,7 +25,7 @@ public class Spongebob extends Patrick {
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);
-			init(x2, y2);        
+			init(x4, y4);        
 		}
 		
 		public void paint(Graphics g) {
@@ -40,7 +42,7 @@ public class Spongebob extends Patrick {
 		
 		
 		private void update() {
-			tx.setToTranslation(x2, y2);
+			tx.setToTranslation(x4, y4);
 			tx.scale(0.2, 0.2);
 		}
 		

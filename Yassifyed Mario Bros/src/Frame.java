@@ -49,6 +49,17 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	public void paint(Graphics g) {
 		super.paintComponent(g);
 		
+		bg.paint(g);
+		
+		//bg if game end
+		if(gameEnd) {
+			g.setColor(Color.WHITE);
+			g.setFont(f2);
+			g.drawString("Score: " + score, 340, 230);
+			g.drawString("BooHoo You Lost", 290, 280);
+			g.drawString("Press Down Arrow to Retry", 235, 330);
+		return;
+		} 
 		
 		//bg before game begins
 		
@@ -95,7 +106,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				}
 		
 		//end game
-				
+				if (score <= 0) {
+					gameEnd = true;
+				}
 				
 	}
 	
@@ -160,6 +173,10 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			//intro screen diss. when enter is pressed
 			if (arg0.getKeyCode() == 10) {
 				 gameStart = true;
+			}
+			
+			if (arg0.getKeyCode() == 40) {
+				gameStart = false;
 			}
 			
 	}
