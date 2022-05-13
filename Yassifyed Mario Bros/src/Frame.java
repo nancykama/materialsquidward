@@ -29,6 +29,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
 	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
 	
+	//MUSIC
+	Music soundJump = new Music("Mario-jump-sound.wav", false);
+	Music soundDead = new Music("Pacman-death-sound_(1).wav", false);
 	
 	//intro screen 
 	boolean gameStart = false;
@@ -52,12 +55,13 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		bg.paint(g);
 		
 		//bg if game end
+	
 		if(gameEnd) {
 			g.setColor(Color.WHITE);
 			g.setFont(f2);
 			g.drawString("Score: " + score, 340, 230);
 			g.drawString("BooHoo You Lost", 290, 280);
-			g.drawString("Press Down Arrow to Retry", 235, 330);
+			g.drawString("ReRun the Game to Retry", 235, 330);
 		return;
 		} 
 		
@@ -108,6 +112,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//end game
 				if (score <= 0) {
 					gameEnd = true;
+					soundDead.play();
 				}
 				
 	}
@@ -170,9 +175,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			System.out.println(arg0.getKeyCode());
 			
 			squiddy.fall();
+			
 			//intro screen diss. when enter is pressed
 			if (arg0.getKeyCode() == 10) {
 				 gameStart = true;
+				 
 			}
 			
 			if (arg0.getKeyCode() == 40) {
@@ -185,6 +192,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
 			squiddy.jump();
+			soundJump.play();
 	}
 
 	@Override
