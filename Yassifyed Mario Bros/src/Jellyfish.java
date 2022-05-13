@@ -37,14 +37,14 @@ public class Jellyfish {
 			//call update to update the actual picture location
 			update();
 			g2.drawImage(img, tx, null);
-
+ 
 		}
 		/* update the picture variable location */
 		private void update() {
 			 y1+= bvy1; 
 			 
 			 if (y1 > 600) {
-				 y1 = 0;
+				 y1 = 0; 
 			 }
 			
 			 tx.setToTranslation(x1, y1);
