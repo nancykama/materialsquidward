@@ -16,21 +16,28 @@ import javax.swing.Timer;
 
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 	
-	//CREATE THE OBJECTS (STEP 1)
+	//jelly rand vars
+	int x1 = (int)(Math.random() * 601) + 100;
+	
+	//CREATE THE OBJECTS (STEP 1) 
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
-	Jellyfish jelly1 = new Jellyfish (10, 10);
+	Jellyfish jelly1 = new Jellyfish (x1, 50);
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
 	Spongebob spongy = new Spongebob (300, 450);
 	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
 	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
 	
+	
 	//intro screen 
 	boolean gameStart = false;
 	
 	//coin disappearance
-	boolean coinCollect = false;
+	boolean coinCollect = false; 
+	
+	//exit screen
+	boolean gameEnd = false;
 	
 	//score 
 	int score = 100;  
@@ -41,6 +48,19 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	public void paint(Graphics g) {
 		super.paintComponent(g);
+		
+		bg.paint(g);
+		
+		//bg if game end
+		if(gameEnd) {
+			g.setColor(Color.WHITE);
+			g.setFont(f2);
+			g.drawString("Score: " + score, 340, 230);
+			g.drawString("BooHoo You Lost", 290, 280);
+			g.drawString("Press Down Arrow to Retry", 235, 330);
+		return;
+		} 
+		
 		//bg before game begins
 		
 		bg.paint(g);
@@ -50,12 +70,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		if(!gameStart) {
 			g.setColor(Color.WHITE);
 			g.setFont(f2);
-			g.drawString("welcome. help material squiddy win his chanel nine boots", 60, 250);
+			g.drawString("welcome. help material squiddy win", 187, 250);
 			g.drawString("press enter to commence your pineapple under-the-sea adventure", 20, 300);
 		return;
 		} 
 		
-		 
 		bg.paint(g);
 		squiddy.paint(g);
 		jelly1.paint(g);
@@ -64,43 +83,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		
 		//add rectangles
 			Rectangle rsquiddy = new Rectangle (squiddy.x, squiddy.y, 50, 50);
+			Rectangle rjelly = new Rectangle (jelly1.x1, jelly1.y1, 50, 50);
+			Rectangle rpatty1 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
+			Rectangle rpatty2 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
 
-		KrabbyPatty[][] myCoins = new KrabbyPatty[4][6];
-		int x2 = 200;
-		int y2 = 200;
-		int bvx = 50;
-		
-		for (int r = 0; r < myCoins.length; r ++) {
-			for (int c = 0; c < myCoins[0].length; c++) {
-				KrabbyPatty temp = new KrabbyPatty(x2, y2);
-				myCoins[r][c] = temp;
-				
-				//collision between peppa and coins
-			    Rectangle rcoin = new Rectangle (myCoins[r][c].x2, myCoins[r][c].y2, 50, 50);
-			    if (rsquiddy.intersects(rcoin)) {
-					score += 1;
-					coinCollect = true;
-				}
-			    
-			}
-		}
-		
-		for (int r = 0; r < myCoins.length; r++) {
-			for (int c = 0; c < myCoins[0].length; c++) {
-				if (!coinCollect) {
-					myCoins[r][c].paint(g);
-				}
-			}
-		}
-		    
-		    
-			//boundaries 
-		    x2+= bvx;
-		    if (x2 > 450) {
-				 x2 = 200;
-				 y2 += 50;
-			}
-		    
+
 				
 		//score
 				g.setColor(Color.BLACK);
@@ -114,7 +101,15 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				g.drawString("press enter to jump and proceed forward", 150, 30);
 
 		//set collision
+				if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
+					score -= 3;
+				}
 		
+		//end game
+				if (score <= 0) {
+					gameEnd = true;
+				}
+				
 	}
 	
 	public static void main(String[] arg) {
@@ -179,6 +174,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			if (arg0.getKeyCode() == 10) {
 				 gameStart = true;
 			}
+			
+			if (arg0.getKeyCode() == 40) {
+				gameStart = false;
+			}
+			
 	}
 
 	@Override
