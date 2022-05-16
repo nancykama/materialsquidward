@@ -12,7 +12,7 @@ public class KrabbyPatty {
 		private Image img;
 		public int bvx1 = 4;
 		private AffineTransform tx;
-
+ 
 		public KrabbyPatty (int x, int y) {
 			this.x3 = x; 
 			this.y3 = y;

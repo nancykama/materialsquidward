@@ -28,7 +28,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Spongebob spongy = new Spongebob (300, 450);
 	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
 	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
-	
+	 
 	//MUSIC
 	Music soundJump = new Music("Mario-jump-sound.wav", false);
 	Music soundDead = new Music("Pacman-death-sound_(1).wav", false);

@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class Jellyfish {
 	//add location attributes
-		public int x1 , y1;
+		public int x1 , y1; 
 		//position 
 		private Image img;
 		public int bvy1 = 4;

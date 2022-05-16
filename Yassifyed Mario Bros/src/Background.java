@@ -13,7 +13,7 @@ public class Background{
 	private Image img; 	
 	private AffineTransform tx;
 
-	public Background(int x, int y) {
+	public Background(int x, int y) { 
 		img = getImage("/imgs/bgMaterial.png"); //load the image for Tree
 		tx = AffineTransform.getTranslateInstance(x, y );
 		init(x, y); 				//initialize the location of the image
