@@ -10,7 +10,7 @@ import javax.sound.sampled.LineEvent;
 import javax.sound.sampled.LineListener;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class Music  implements Runnable  {
+public class Music  implements Runnable  { 
 	Thread t;
 	File audioFile ;
     AudioInputStream audioStream;

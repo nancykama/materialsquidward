@@ -61,7 +61,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			g.setFont(f2);
 			g.drawString("Score: " + score, 340, 230);
 			g.drawString("BooHoo You Lost", 290, 280);
-			g.drawString("ReRun the Game to Retry", 235, 330);
+			g.drawString("ReRun the Game to Retry", 245, 330);
 		return;
 		} 
 		
@@ -102,7 +102,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		// game instructions
 				g.setColor(Color.WHITE);
 				g.setFont(f2);
-				g.drawString("press enter to jump and proceed forward", 150, 30);
+				g.drawString("press space to jump and proceed forward", 150, 30);
 
 		//set collision
 				if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
