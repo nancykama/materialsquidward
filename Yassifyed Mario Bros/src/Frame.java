@@ -72,7 +72,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//bg before game begins
 		
 		bg.paint(g);
-		coin1.paint(g);
+		coin1.paint(g);  
 		coin2.paint(g);
 		
 		if(!gameStart) {
