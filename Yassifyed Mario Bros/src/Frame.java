@@ -17,12 +17,16 @@ import javax.swing.Timer;
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 	
 	//jelly rand vars
-	int x1 = (int)(Math.random() * 601) + 100;
+	int x0 = (int)(Math.random() * 601) + 100;
+	int x01 = (int)(Math.random() * 601) + 100;
+	int x02 = (int)(Math.random() * 601) + 100;
 	
 	//CREATE THE OBJECTS (STEP 1) 
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
-	Jellyfish jelly1 = new Jellyfish (x1, 50);
+	Jellyfish jelly1 = new Jellyfish (x0, 50);
+	Jellyfish jelly2 = new Jellyfish (x01, 50);
+	Jellyfish jelly3 = new Jellyfish (x02, 50);
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
 	Spongebob spongy = new Spongebob (300, 450);
@@ -43,7 +47,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	boolean gameEnd = false;
 	
 	//score 
-	int score = 100;  
+	int score = 200;  
 	
 	//font
 	Font f1 = new Font (Font.MONOSPACED, Font.PLAIN, 26);
@@ -84,13 +88,17 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		jelly1.paint(g);
 		patty1.paint(g);
 		patty2.paint(g);
+		jelly2.paint(g);
+		jelly3.paint(g);
 		
-		//add rectangles
+		//add rectangles 
 			Rectangle rsquiddy = new Rectangle (squiddy.x, squiddy.y, 50, 50);
 			Rectangle rjelly = new Rectangle (jelly1.x1, jelly1.y1, 50, 50);
+			Rectangle rjelly1 = new Rectangle (jelly2.x1, jelly2.y1, 50, 50);
+			Rectangle rjelly2 = new Rectangle (jelly3.x1, jelly3.y1, 50, 50);
 			Rectangle rpatty1 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
 			Rectangle rpatty2 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
-
+  
 
 				
 		//score
