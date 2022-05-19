@@ -8,7 +8,7 @@ In Quarter 4, we were assigned to create a game encompassing all the JAVA concep
 ## **Game Overview:**
 For this game, we wanted to do a fun spinoff on Mario Bros, collabing with Spongebob characters. The goal is to increase the score  by ***evading obstacles*** and ***collecting coins*** to get more points. We all know Handsome Squidward is an icon and the moment but can you match his slay levels and win the game?
 
-![Game GIF recording](https://user-images.githubusercontent.com/70664950/148616276-9d9905af-cb97-4c10-8976-aa47a80b6436.gif)
+![Game GIF recording](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/ezgif.com-gif-maker%20(1).gif)
 
 ## **Meet the Characters:**
 ![squiddy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/squiddy_225x225.png)
