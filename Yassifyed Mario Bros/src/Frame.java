@@ -13,6 +13,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import java.util.Random;
 
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 	
@@ -32,6 +33,11 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Spongebob spongy = new Spongebob (300, 450);
 	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
 	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
+	
+	//color array
+	Color scoreColors[][] = {{Color.RED, Color.ORANGE}, {Color.YELLOW, Color.GREEN}, {Color.BLUE, Color.MAGENTA}, {Color.LIGHT_GRAY, Color.PINK}};
+	Color scoreColor = Color.WHITE;
+	Random rnd = new Random();
 	 
 	//MUSIC
 	Music soundJump = new Music("Mario-jump-sound.wav", false);
@@ -47,7 +53,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	boolean gameEnd = false;
 	
 	//score 
-	int score = 200;  
+	int score = 300;  
 	
 	//font
 	Font f1 = new Font (Font.MONOSPACED, Font.PLAIN, 26);
@@ -61,7 +67,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//bg if game end
 	
 		if(gameEnd) {
-			g.setColor(Color.WHITE);
+			g.setColor(scoreColors[rnd.nextInt(scoreColors.length)][rnd.nextInt(scoreColors[0].length)]);
 			g.setFont(f2);
 			g.drawString("Score: " + score, 340, 230);
 			g.drawString("BooHoo You Lost", 290, 280);
@@ -98,11 +104,14 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			Rectangle rjelly2 = new Rectangle (jelly3.x1, jelly3.y1, 50, 50);
 			Rectangle rpatty1 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
 			Rectangle rpatty2 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
-  
-
-				
+		
+		//set collision
+			if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
+				score -= 3;
+			}
+  	
 		//score
-				g.setColor(Color.BLACK);
+				g.setColor(scoreColor);
 				g.setFont(f1);
 				g.drawString("Score: " + score, 610, 90);
 				
@@ -111,11 +120,6 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				g.setColor(Color.WHITE);
 				g.setFont(f2);
 				g.drawString("press space to jump and proceed forward", 150, 30);
-
-		//set collision
-				if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
-					score -= 3;
-				}
 		
 		//end game
 				if (score <= 0) {
@@ -183,6 +187,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			System.out.println(arg0.getKeyCode());
 			
 			squiddy.fall();
+			scoreColor = scoreColors[rnd.nextInt(scoreColors.length)][rnd.nextInt(scoreColors[0].length)];
 			
 			//intro screen diss. when enter is pressed
 			if (arg0.getKeyCode() == 10) {
