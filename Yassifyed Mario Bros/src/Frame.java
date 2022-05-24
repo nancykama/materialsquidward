@@ -90,7 +90,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		} 
 		
 		bg.paint(g);
-		squiddy.paint(g);
+		squiddy.paint(g); 
 		jelly1.paint(g);
 		patty1.paint(g);
 		patty2.paint(g);
