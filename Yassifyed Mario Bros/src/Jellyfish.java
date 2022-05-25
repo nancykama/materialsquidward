@@ -11,7 +11,7 @@ public class Jellyfish {
 		//position 
 		private Image img;
 		public int bvy1 = 4;
-		private AffineTransform tx;
+		private AffineTransform tx; 
 
 		public Jellyfish (int x, int y) {
 			this.x1 = x;

@@ -48,7 +48,7 @@ public class Music  implements Runnable  {
 	     t.start ();
 	}
 	public void start() {
-	     t = new Thread (this, fn);
+	     t = new Thread (this, fn); 
 	     t.start ();
 	}
 	public void start2() {

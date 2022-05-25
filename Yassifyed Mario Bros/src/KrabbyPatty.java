@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class KrabbyPatty {
+public class KrabbyPatty { 
 	//add location attributes
 		public int x3 , y3;
 		//position of the coins 

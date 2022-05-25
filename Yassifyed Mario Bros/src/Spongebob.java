@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class Spongebob extends Patrick {
 	//add location attributes
-		private int x2 , y2;
+		private int x2 , y2; 
 		//position  
 		private Image img;
 		private AffineTransform tx;

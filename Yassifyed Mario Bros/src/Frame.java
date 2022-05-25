@@ -70,7 +70,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			g.setColor(scoreColors[rnd.nextInt(scoreColors.length)][rnd.nextInt(scoreColors[0].length)]);
 			g.setFont(f2);
 			g.drawString("Score: " + score, 340, 230);
-			g.drawString("BooHoo You Lost", 290, 280);
+			g.drawString("BooHoo You Lost", 290, 280); 
 			g.drawString("ReRun the Game to Retry", 245, 330);
 		return;
 		} 
