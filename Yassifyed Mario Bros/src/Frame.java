@@ -55,7 +55,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	//score 
 	int score = 300;  
 	
-	//font
+	//font 
 	Font f1 = new Font (Font.MONOSPACED, Font.PLAIN, 26);
 	Font f2 = new Font (Font.DIALOG, Font.PLAIN, 26);
 	

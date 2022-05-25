@@ -23,7 +23,7 @@ public class Jellyfish {
 										//use your variables
 		}
 		
-		
+		 
 		
 		public void changePicture(String newFileName) {
 			img = getImage(newFileName);

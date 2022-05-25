@@ -34,7 +34,7 @@ public class Patrick {
 			Graphics2D g2 = (Graphics2D) g;
 
 			//call update to update the actual picture location
-			update();
+			update(); 
 			g2.drawImage(img, tx, null);
 
 		}
