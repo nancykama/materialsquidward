@@ -10,7 +10,7 @@ public class KrabbyPatty {
 		public int x3 , y3;
 		//position of the coins 
 		private Image img;
-		public int bvx1 = 4;
+		public int bvy1 = 4;
 		private AffineTransform tx;
  
 		public KrabbyPatty (int x, int y) {
@@ -41,7 +41,11 @@ public class KrabbyPatty {
 		}
 		/* update the picture variable location */
 		private void update() {
-			 x3 += bvx1;
+			 y3 += bvy1;
+			 
+			 if (y3 > 600) {
+				 y3 = 0;
+			 }
 			 
 			 if (x3 > 800) {
 				 x3 = 0;

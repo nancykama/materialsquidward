@@ -21,20 +21,22 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	int x0 = (int)(Math.random() * 601) + 100;
 	int x01 = (int)(Math.random() * 601) + 100;
 	int x02 = (int)(Math.random() * 601) + 100;
+	int x03 = (int)(Math.random() * 601) + 100;
 	
 	//CREATE THE OBJECTS (STEP 1) 
 	Background 	bg 	= new Background(0, 0);
 	Squiddy squiddy = new Squiddy (50, 380);
 	Jellyfish jelly1 = new Jellyfish (x0, 50);
 	Jellyfish jelly2 = new Jellyfish (x01, 50);
-	Jellyfish jelly3 = new Jellyfish (x02, 50);
 	Patrick patty1 = new Patrick (150, 450);
 	Patrick patty2 = new Patrick (500, 450);
 	Spongebob spongy = new Spongebob (300, 450);
 	KrabbyPatty coin1 = new KrabbyPatty(50, 20);
-	KrabbyPatty coin2 = new KrabbyPatty(50, 450);
+	KrabbyPatty coin2 = new KrabbyPatty(680, 20);
+	KrabbyPatty coin = new KrabbyPatty(x02, 0); 
+	KrabbyPatty coinn = new KrabbyPatty(x03, 0); 
 	
-	//color array
+	//color 2D array
 	Color scoreColors[][] = {{Color.RED, Color.ORANGE}, {Color.YELLOW, Color.GREEN}, {Color.BLUE, Color.MAGENTA}, {Color.LIGHT_GRAY, Color.PINK}};
 	Color scoreColor = Color.WHITE;
 	Random rnd = new Random();
@@ -95,19 +97,29 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		patty1.paint(g);
 		patty2.paint(g);
 		jelly2.paint(g);
-		jelly3.paint(g);
+		coin.paint(g);
+		coinn.paint(g);
 		
 		//add rectangles 
 			Rectangle rsquiddy = new Rectangle (squiddy.x, squiddy.y, 50, 50);
 			Rectangle rjelly = new Rectangle (jelly1.x1, jelly1.y1, 50, 50);
 			Rectangle rjelly1 = new Rectangle (jelly2.x1, jelly2.y1, 50, 50);
-			Rectangle rjelly2 = new Rectangle (jelly3.x1, jelly3.y1, 50, 50);
 			Rectangle rpatty1 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
-			Rectangle rpatty2 = new Rectangle (patty1.x2, patty1.y2, 50, 50);
+			Rectangle rpatty2 = new Rectangle (patty2.x2, patty2.y2, 50, 50);
+			Rectangle rcoin = new Rectangle (coin.x3, coin.y3, 50, 50);
+			Rectangle rcoinn = new Rectangle (coinn.x3, coinn.y3, 50, 50);
 		
 		//set collision
-			if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly)) {
+			if (rsquiddy.intersects(rpatty1) || rsquiddy.intersects(rpatty2) || rsquiddy.intersects(rjelly) || rsquiddy.intersects(rjelly1)) {
 				score -= 3;
+			}
+			
+			if (rsquiddy.intersects(rcoin) || rsquiddy.intersects(rcoinn)) {
+				score += 10;
+				coin.y3 = 0;
+				coinn.y3 = 10;
+				coin.x3 = rnd.nextInt(700 - 10 + 1) + 10;
+				coinn.x3 = rnd.nextInt(700 - 10 + 1) + 10;
 			}
   	
 		//scoring
@@ -134,7 +146,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	}
 	
 	public Frame() {
-		JFrame f = new JFrame("Crossy Street");
+		JFrame f = new JFrame("Pineapple Under the Sea");
 		f.setSize(new Dimension(800, 600));
 		f.setBackground(Color.blue);
 		f.add(this);
