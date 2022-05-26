@@ -34,14 +34,14 @@ public class Patrick {
 			Graphics2D g2 = (Graphics2D) g;
 
 			//call update to update the actual picture location
-			update(); 
-			g2.drawImage(img, tx, null);
+			update();  
+			g2.drawImage(img, tx, null); 
 
 		}
-		/* update the picture variable location */
+		/* update the picture variable location */ 
 		private void update() {
 			tx.setToTranslation(x2, y2);  
-			tx.scale(1.4, 1.4);
+			tx.scale(1.4, 1.4); 
 		}
 		
 		private void init(double a, double b) {

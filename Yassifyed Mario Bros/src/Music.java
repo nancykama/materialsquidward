@@ -52,7 +52,7 @@ public class Music  implements Runnable  {
 	     t.start ();
 	}
 	public void start2() {
-		audioFile = new File(fn);
+		audioFile = new File(fn); 
 		try {
 			audioStream = AudioSystem.getAudioInputStream(audioFile);
 			AudioFormat format = audioStream.getFormat();
