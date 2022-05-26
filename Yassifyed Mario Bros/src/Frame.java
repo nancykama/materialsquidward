@@ -56,6 +56,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//score 
 	int score = 300;  
+	int coinCount = 0;
 	
 	//font 
 	Font f1 = new Font (Font.MONOSPACED, Font.PLAIN, 26);
@@ -71,9 +72,10 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		if(gameEnd) {
 			g.setColor(scoreColors[rnd.nextInt(scoreColors.length)][rnd.nextInt(scoreColors[0].length)]);
 			g.setFont(f2);
-			g.drawString("Score: " + score, 340, 230);
-			g.drawString("BooHoo You Lost", 290, 280); 
-			g.drawString("ReRun the Game to Retry", 245, 330);
+			g.drawString("Score: " + score, 340, 200);
+			g.drawString("Slay's Acquired: " + coinCount, 290, 250);
+			g.drawString("BooHoo You Lost", 290, 300); 
+			g.drawString("ReRun the Game to Retry", 245, 350);
 		return;
 		} 
 		
@@ -116,6 +118,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			
 			if (rsquiddy.intersects(rcoin) || rsquiddy.intersects(rcoinn)) {
 				score += 10;
+				coinCount ++;
 				coin.y3 = 0;
 				coinn.y3 = 10;
 				coin.x3 = rnd.nextInt(700 - 10 + 1) + 10;
@@ -125,7 +128,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//scoring
 				g.setColor(scoreColor);
 				g.setFont(f1);
-				g.drawString("Score: " + score, 610, 90);
+				g.drawString("Slay Count: " + score, 525, 90);
 				
 
 		// game instructions
