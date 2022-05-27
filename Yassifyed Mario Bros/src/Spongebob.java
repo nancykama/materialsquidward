@@ -14,7 +14,7 @@ public class Spongebob extends Patrick {
 
 		public Spongebob (int x, int y) {
 			super(x, y);
-			img = getImage("/imgs/fully yassified spongy.png"); //load the image for Tree
+			img = getImage("/imgs/fully yassified spongy.png"); //load the image 
 			//use your variables
 		}
 		
