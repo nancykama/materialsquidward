@@ -15,6 +15,21 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import java.util.Random;
 
+
+/*
+ * i like the graphics
+ * suggestion: make a moving left key
+ * cool! 10/10 would slay again
+ *SO SLAY YASS
+ * i have epilepsfkljasdljgklahstk;ajdf
+ * how
+ * why is squidward so hot in this oh my goooooood
+ * ^^^^ WHY ITS SO GOOD
+ * patrick got me acting up
+ * collision?
+ * I CAN'T WIN 0/10
+ * ^Man above is just bad, solid 10/10
+ */
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 	
 	//jelly rand vars
