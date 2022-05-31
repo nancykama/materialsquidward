@@ -28,7 +28,7 @@ import java.util.Random;
  * patrick got me acting up
  * collision?
  * I CAN'T WIN 0/10
- * ^Man above is just bad, solid 10/10
+ * ^Man above is just bad, solid 10/10 
  */
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 	
