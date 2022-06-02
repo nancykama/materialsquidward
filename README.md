@@ -1,5 +1,5 @@
 # **Material Gworl Squidward!**
-#### ***Objective: Help Squiddy collect his Krabby Patties and slay while evading Emo Gworl Patrick, Spongebob Roundpants, and Jellyfish***
+#### ***Objective: Help Squiddy collect his Krabby Patties and slay while evading Emo Gworl Patrick, Spongebob Roundpants, and Jellyfish!***
 
 
 ## **Project Intro:**
