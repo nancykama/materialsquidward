@@ -40,7 +40,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	//CREATE THE OBJECTS (STEP 1) 
 	Background 	bg 	= new Background(0, 0);
-	Squiddy squiddy = new Squiddy (50, 380);
+	Squiddy squiddy = new Squiddy (52, 380);
 	Jellyfish jelly1 = new Jellyfish (x0, 50);
 	Jellyfish jelly2 = new Jellyfish (x01, 50);
 	Patrick patty1 = new Patrick (150, 450);
