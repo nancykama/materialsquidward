@@ -1,78 +1,103 @@
-import java.io.File;
-import java.io.IOException;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.geom.AffineTransform;
+import java.net.URL;
 
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineEvent;
-import javax.sound.sampled.LineListener;
-import javax.sound.sampled.UnsupportedAudioFileException;
+public class Squiddy {
+	
+	//add location attributes
+	public int x = 50, y = 300;
+	//position of peppa
+	private Image img;
+	private int vx = 1;
+	private int ax = 3;
+	private int vy = 1;
+	private int ay = 3;
+	private AffineTransform tx;
 
-public class Music  implements Runnable  { 
-	Thread t;
-	File audioFile ;
-    AudioInputStream audioStream;
-    Clip audioClip;
-    String fn; 
-	public Music(String fileName, boolean loops) {
-		fn = fileName;
-		audioFile = new File(fileName);
-		try {
-			audioStream = AudioSystem.getAudioInputStream(audioFile);
-			AudioFormat format = audioStream.getFormat();
-	        DataLine.Info info = new DataLine.Info(Clip.class, format);
-	        audioClip = (Clip) AudioSystem.getLine(info);
-	        
-	        if(loops) {
-	        	audioClip.loop(audioClip.LOOP_CONTINUOUSLY);;
-	        }	        
-	        audioClip.open(audioStream);
-	        //audioClip.start();
-		} catch (UnsupportedAudioFileException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public Squiddy(int x, int y) {
+		this.x = x;
+		this.y = y;
+		img = getImage("/imgs/squiddy.png"); //load the image for Tree
+
+		tx = AffineTransform.getTranslateInstance(x, y );
+		init(x, y); 				//initialize the location of the image
+									//use your variables
 	}
 	
-	public void play() {
-		start3();
-	}
-	public void start3() {
-	     t = new Thread (this, fn);
-	     start2();
-	     t.start ();
-	}
-	public void start() {
-	     t = new Thread (this, fn); 
-	     t.start ();
-	}
-	public void start2() {
-		audioFile = new File(fn); 
-		try {
-			audioStream = AudioSystem.getAudioInputStream(audioFile);
-			AudioFormat format = audioStream.getFormat();
-	        DataLine.Info info = new DataLine.Info(Clip.class, format);
-	        audioClip = (Clip) AudioSystem.getLine(info);
-	        audioClip.open(audioStream);
-	        audioClip.start();
-		} catch (UnsupportedAudioFileException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void run() {
-		 audioClip.start();
+	public void changePicture(String newFileName) {
+		img = getImage(newFileName);
+		init(x, y);       
 	}
 	
+	public void paint(Graphics g) {
+		//these are   the 2 lines of code needed draw an image on the screen
+		Graphics2D g2 = (Graphics2D) g;
+
+		//call update to update the actual picture location
+		update();
+		g2.drawImage(img, tx, null);
+
+	}
+	/* update the picture variable location */
+	private void update() {
+		x += vx;
+		vx = ax;
+		y += vy;
+		vy = ay;
+		
+		if (x > 790) {
+			x = 10;
+			vx = 0;
+		}
+		
+		if (x < 10) {
+			x = 10;
+			vx = 0;
+		}
+		
+		if (y > 590) {
+			y = 10;
+			vy = 0;
+		}
+		
+		if (y < 10) {
+			y = 10;
+			vy = 10;
+		} 
+		
+		tx.setToTranslation(x, y);
+		tx.scale(0.8, 0.8);
+	}
+	
+	public void jump () {
+		vy -= 50;
+		vx += 30;
+	 }
+	
+	private void init(double a, double b) {
+		tx.setToTranslation(a, b);
+		tx.scale(.8, .8);
+	}
+	
+	public void fall () {
+		vy -= 100;
+	}
+	
+
+	private Image getImage(String path) {
+		Image tempImage = null;
+		try {
+			URL imageURL = Squiddy.class.getResource(path);
+			tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return tempImage;
+	}
 
 }
