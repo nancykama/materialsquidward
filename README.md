@@ -16,7 +16,46 @@ For this game, we wanted to do a fun spinoff on Mario Bros, collabing with Spong
 ![patrick](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/emogworlpatty_150x150.png)
 ![spongy](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/fully_yassified_spongy_2_200x140.png)
 ![krabbypatty](https://github.com/nancykama/materialsquidward/blob/master/Yassifyed%20Mario%20Bros/src/imgs/material_patty-removebg-preview_2_90x90.png)
- 
+
+## **Specific Elements of Code**
+Here are some of the things we had to include to show stuff we learned in `JAVA`
+- Inheritance 
+  ```
+  public class Spongebob extends Patrick {
+	//add location attributes
+		private int x2 , y2; 
+		//position  
+		private Image img;
+		private AffineTransform tx;
+
+		public Spongebob (int x, int y) {
+			super(x, y);
+			img = getImage("/imgs/fully yassified spongy.png"); //load the image 
+			//use your variables
+		}
+  ```
+- 2D Array Implementation
+  - Initialization
+    ```
+    Color scoreColors[][] = {{Color.RED, Color.ORANGE}, {Color.YELLOW, Color.GREEN}, {Color.BLUE, Color.MAGENTA}, {Color.LIGHT_GRAY, Color.PINK}};
+    ```
+  - Switching Colors Through Array Traversal
+    ```
+    scoreColor = scoreColors[rnd.nextInt(scoreColors.length)][rnd.nextInt(scoreColors[0].length)];
+    ```
+- Randomization
+  ```
+     int x0 = (int)(Math.random() * 601) + 100;
+     int x01 = (int)(Math.random() * 601) + 100;
+	 int x02 = (int)(Math.random() * 601) + 100;
+	 int x03 = (int)(Math.random() * 601) + 100;
+  ```
+  ```
+          coin.x3 = rnd.nextInt(700 - 10 + 1) + 10;
+		coinn.x3 = rnd.nextInt(700 - 10 + 1) + 10;
+  ```
+These were just some of the specifics we had to include, because we learned these concepts after Term 1, so we had to show that we were able to apply them. 
+
 ## **What We Learned:**
 As we have been working on this project for the whole quarter, we learned a lot. We learned how to apply the skills we were taught (shoutout Mr.David) throughout CSA towards projects we see in real life rather than ***AP FRQs and MCQs***. We also learned how to incorporate `file reading` and `switch case` statements into our code. The biggest concepts we got to put to motion were `Inheritance` and `2D arrays` with nested loops. With the AP exam rapidly approaching, we only got to use these functions in accordance with exam practice, so applying them in the game was our first time learning how we can recognize these concepts at work in other well known projects and games. 
 
