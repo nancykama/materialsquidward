@@ -57,6 +57,7 @@ Here are some of the things we had to include to show stuff we learned in `JAVA`
 These were just some of the specifics we had to include, because we learned these concepts after Term 1, so we had to show that we were able to apply them. 
 
 ## **Game Design:**
+![game](https://github.com/nancykama/materialsquidward/blob/master/game1.PNG)
 ![endscreen](https://github.com/nancykama/materialsquidward/blob/master/ezgif.com-gif-maker.gif)
 ## **What We Learned:**
 As we have been working on this project for the whole quarter, we learned a lot. We learned how to apply the skills we were taught (shoutout Mr.David) throughout CSA towards projects we see in real life rather than ***AP FRQs and MCQs***. We also learned how to incorporate `file reading` and `switch case` statements into our code. The biggest concepts we got to put to motion were `Inheritance` and `2D arrays` with nested loops. With the AP exam rapidly approaching, we only got to use these functions in accordance with exam practice, so applying them in the game was our first time learning how we can recognize these concepts at work in other well known projects and games. 
