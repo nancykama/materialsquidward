@@ -57,7 +57,7 @@ Here are some of the things we had to include to show stuff we learned in `JAVA`
 These were just some of the specifics we had to include, because we learned these concepts after Term 1, so we had to show that we were able to apply them. 
 
 ## **Game Design:**
-![game](https://github.com/nancykama/materialsquidward/blob/master/game1.PNG)
+![game](https://github.com/nancykama/materialsquidward/blob/master/other%20imgs/game1.PNG)
 ![endscreen](https://github.com/nancykama/materialsquidward/blob/master/ezgif.com-gif-maker.gif)
 
 ## **Trello** 
