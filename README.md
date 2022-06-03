@@ -59,6 +59,11 @@ These were just some of the specifics we had to include, because we learned thes
 ## **Game Design:**
 ![game](https://github.com/nancykama/materialsquidward/blob/master/game1.PNG)
 ![endscreen](https://github.com/nancykama/materialsquidward/blob/master/ezgif.com-gif-maker.gif)
+
+## **Trello** 
+In this project, we didn't just focus on coding. We also worked on or project organization and time management skills. Our favorite teacher Mr. DomDavid introduced us to Trello, the best organizational platform. It was super helpful to assign people and due dates to different tasks. There was also a lot of aesthetic options liek labels and color coding to make our Trello Board more slay. I <3 Trello. 
+![trello]()
+
 ## **What We Learned:**
 As we have been working on this project for the whole quarter, we learned a lot. We learned how to apply the skills we were taught (shoutout Mr.David) throughout CSA towards projects we see in real life rather than ***AP FRQs and MCQs***. We also learned how to incorporate `file reading` and `switch case` statements into our code. The biggest concepts we got to put to motion were `Inheritance` and `2D arrays` with nested loops. With the AP exam rapidly approaching, we only got to use these functions in accordance with exam practice, so applying them in the game was our first time learning how we can recognize these concepts at work in other well known projects and games. 
 
